@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p>
                 <!-- add mysql connection here -->
                 <?php
-                $conn = new mysqli($_SERVER['RDS_HOSTNAME'], $_SERVER['RDS_USERNAME'], $_SERVER['RDS_PASSWORD'], 'ebdb');
+                $conn = new mysqli('172.31.24.184', 'ec2user', 'password', 'ebdb');
                 // Check connection
                 if (mysqli_connect_errno()) {
                     echo "Failed to connect to MySQL: " . mysqli_connect_error();
